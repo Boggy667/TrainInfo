@@ -1,14 +1,22 @@
 import time
+import requests
 
 hour = time.strftime("%H")
 dayOfWeek = time.strftime("%w")
 
-#Set Up RTT Connection
-#Query In
-#Query Out
-#Close Connection
+#QUERY RTT
+##London
+rttLondon = requests.request('GET','https://api.rtt.io/api/v1/json/search/BCE/to/WAT', auth=('user', 'password'))
 
-#Format In & Out Lists
+##Country
+rttCountry = requests.request('GET','https://api.rtt.io/api/v1/json/search/WAT/to/BCE', auth=('user', 'password'))
+
+#PARSE LONDON DATA
+
+
+#PARSE COUNTRY DATA
+
+
 
 if (dayOfWeek == 0 or dayOfWeek == 6):
 	print("Weekend")
