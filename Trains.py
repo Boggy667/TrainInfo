@@ -3,9 +3,12 @@ import time
 hour = time.strftime("%H")
 dayOfWeek = time.strftime("%w")
 
-#query Realtime Trains
-#Filter Out 2-3 Relevant Trains & Info
-#Build In & Out Lists
+#Set Up RTT Connection
+#Query In
+#Query Out
+#Close Connection
+
+#Format In & Out Lists
 
 if (dayOfWeek == 0 or dayOfWeek == 6):
 	print("Weekend")
@@ -17,3 +20,6 @@ else:
 	else:
 		#Display In List
 		print("Weekday London")
+		
+#FUTURE
+	#Add Graphical Elements and text colours
