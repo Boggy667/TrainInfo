@@ -1,15 +1,16 @@
 import time
 import requests
+import json
 
 hour = time.strftime("%H")
 dayOfWeek = time.strftime("%w")
 
 #QUERY RTT
 ##London
-rttLondon = requests.request('GET','https://api.rtt.io/api/v1/json/search/BCE/to/WAT', auth=('user', 'password'))
+rttLondon = requests.get('https://api.rtt.io/api/v1/json/search/BCE/to/WAT', auth=('un', 'pw')).json()
 
 ##Country
-rttCountry = requests.request('GET','https://api.rtt.io/api/v1/json/search/WAT/to/BCE', auth=('user', 'password'))
+rttCountry = requests.get('https://api.rtt.io/api/v1/json/search/WAT/to/BCE', auth=('un', 'pw')).json()
 
 #PARSE LONDON DATA
 
